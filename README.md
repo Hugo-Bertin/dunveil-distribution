@@ -1,27 +1,26 @@
-# Dunveil Launcher
+﻿# Dunveil Launcher
 
-Dunveil is an original Minecraft Java Edition magic academy server project, built around six elements: Nature, Fire, Ice, Air, Earth and Lightning.
+Le launcher Windows de l’académie de magie Dunveil, pour l’équipe de construction et de développement.
 
-This repository is the public distribution and information page for **Dunveil Launcher**, our desktop launcher. The initial version targets the Windows development and building team; macOS and Linux are planned for later.
+## Installation
 
-## What the launcher does
+[Télécharger la dernière version](https://github.com/Hugo-Bertin/dunveil-distribution/releases/latest), puis ouvrir le fichier **Dunveil-Launcher-Setup**. Le launcher installe Java 21, Minecraft 1.21.1, Fabric, les mods et le resource pack nécessaires. Les mises à jour suivantes sont proposées automatiquement.
 
-- Installs and verifies Minecraft Java Edition, Java 21, Fabric and the Dunveil client modpack.
-- Connects players through Microsoft OAuth with PKCE, Xbox Live and Minecraft Services.
-- Checks Minecraft Java ownership and retrieves the player's Minecraft profile.
-- Launches the game for `build.dunveil.fr`.
-- Provides application updates, pack verification and repair, memory settings and support logs.
+Un compte possédant **Minecraft Java Edition** est nécessaire. La connexion passe par la page officielle Microsoft. L’application Microsoft dédiée à Dunveil a reçu son autorisation d’accès aux API Minecraft le 30 septembre 2026.
 
-The launcher requires a legitimate Minecraft Java Edition account. It does not provide cracked/offline authentication or bypass ownership checks. Account session tokens are encrypted locally using the operating system's secure storage. It does not ask for Microsoft passwords itself or send session tokens to a Dunveil authentication server.
+## Profils
 
-## Project status
+- **BUILD** : `build.dunveil.fr`, avec les outils de construction de l’équipe.
+- **DEV** : `dev.dunveil.fr:25566`, avec les mods Dunveil, leurs dépendances et le resource pack. L’accès est actuellement réservé au propriétaire ; le serveur applique aussi sa whitelist.
 
-Initial internal development. The dedicated Microsoft application **Dunveil Launcher** has been registered, and its Minecraft API access review is being prepared. There is no public player release yet. The source repository is private.
+Les instances et les mises à jour des deux profils sont séparées. Les mods tiers sont téléchargés depuis leurs sources officielles Modrinth lorsque disponibles, puis vérifiés par empreinte SHA-256.
 
-Application / client ID: `56e3ba67-daeb-404c-901e-441df3f29eec` (a public identifier, not a secret).
+## Skins Dunveil
 
-## Downloads and updates
+Le launcher permet d’appliquer un skin PNG 64×64 ou 128×128, avec le modèle Steve ou Alex. Ces skins sont propres à Dunveil : ils ne remplacent pas le skin officiel du compte sur les autres serveurs.
 
-Approved releases will be published in this repository's Releases section. Public release files will not include worlds, account sessions or private server configuration. Third-party mod and resource-pack redistribution permissions must be checked before public distribution.
+Les sessions du launcher sont chiffrées localement avec le stockage sécurisé du système. Le service HTTPS de skins Dunveil reçoit temporairement le jeton Minecraft pour vérifier l’identité du joueur auprès de Mojang ; il ne conserve pas ce jeton. Il ne reçoit ni mot de passe Microsoft ni jeton de renouvellement Microsoft. Les textures de skins appliquées sont publiques pour permettre leur affichage aux autres joueurs.
 
-An independent community project; not an official Minecraft product and not approved by or associated with Mojang or Microsoft.
+Les sources sont conservées dans un dépôt privé. Ce dépôt public contient uniquement les fichiers distribuables et les informations de téléchargement. Les versions macOS et Linux sont prévues ultérieurement.
+
+Projet communautaire indépendant, non officiel et non affilié à Mojang ou Microsoft. L’autorisation d’accès aux API ne constitue pas une approbation du projet.
